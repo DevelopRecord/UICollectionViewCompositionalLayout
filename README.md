@@ -1,12 +1,12 @@
-# UICollectionViewCompositionalLayout
+# CompositionalLayout
 UICollectionViewCompositionalLayout에 대한 공부를 합니다.
 
 ## Navigation
 
-[1. Preview](#Preview)   
-[2. UICollectionViewCompositionalLayout](#UICollectionViewCompositionalLayout)   
-[3. NSCollectionLayoutDimension](#NSCollectionLayoutDimension)   
-[4. Conclusion](#Conclusion)   
+1. [Preview](#Preview)   
+2. [CollectionViewCompositionalLayout](#UICollectionViewCompositionalLayout)   
+3. [NSCollectionLayoutDimension](#NSCollectionLayoutDimension)   
+4. [Conclusion](#Conclusion)   
 
 ## Preview
 <img width="40%" height="60%" src="https://user-images.githubusercontent.com/76255765/170684083-f2cd92c8-4020-49fa-b648-1c9f777979a9.gif"/>   
@@ -59,4 +59,4 @@ return section
 </code></pre>
 
 ## Conclusion
-처음엔 낯설지만 적응이 되면 복잡한 레이아웃을 손쉽게 구현 가능합니다. 자세한 사용방법은 [여기](https://www.raywenderlich.com/5436806-modern-collection-views-with-compositional-layouts)를 참고하세요.
+처음엔 낯설지만 적응이 되면 복잡한 컬렉션뷰 레이아웃을 손쉽게 구현 가능합니다. 자세한 사용방법은 [여기](https://www.raywenderlich.com/5436806-modern-collection-views-with-compositional-layouts)를 참고하세요.
