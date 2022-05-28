@@ -72,6 +72,14 @@ class HomeController: UIViewController {
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .groupPaging
                 return section
+            } else if sectionNumber == 3 {
+                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+                item.contentInsets.leading = 10
+                item.contentInsets.bottom = 5
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(360), heightDimension: .absolute(70)), subitems: [item])
+                let section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .groupPaging
+                return section
             } else {
                 let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
                 item.contentInsets.leading = 10
@@ -87,7 +95,7 @@ class HomeController: UIViewController {
 
 extension HomeController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return 5
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -97,6 +105,8 @@ extension HomeController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
             return 10
         } else if section == 2 {
             return 7
+        } else if section == 3 {
+            return 20
         } else {
             return 5
         }
@@ -110,6 +120,9 @@ extension HomeController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCell.identifier, for: indexPath) as? HomeCell ?? HomeCell()
             return cell
         } else if indexPath.section == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCell.identifier, for: indexPath) as? HomeCell ?? HomeCell()
+            return cell
+        } else if indexPath.section == 3 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCell.identifier, for: indexPath) as? HomeCell ?? HomeCell()
             return cell
         } else {
